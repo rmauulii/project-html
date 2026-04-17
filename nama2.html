@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>LATIHAN</h1>
+    <p>Masukan nama
+    <input type ="text" id="nama" placeholder="isi kids">
+    <button onclick="yop()">yop</button>
+   </p>
+    <script>
+        function yop(){
+            let nama = document.getElementById("nama").value;
+          if (nama === "") {
+        alert("Nama tidak boleh kosong");
+        return;}
+            let konfirmasi =confirm("apakah benar ini nama anda");
+           if (konfirmasi === true) {
+                alert("halo " + nama );
+            } else {
+                alert("silahkan periksa kembali nama anda");
+            }
+        }
+        </script>
+</body>
+</html>
