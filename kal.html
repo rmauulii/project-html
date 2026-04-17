@@ -1,0 +1,52 @@
+<html>
+
+<head>
+    <title>Kalender</title>
+
+<body>
+    <script>
+        let nama_toko = "manis selalu"
+        let jumlahBatch = 5
+
+        let nama_bahan1 = " terigu"
+        let kebutuhanTeriguPerBatch = 1500
+        let hargaTeriguPer1000g = 12000
+
+        let nama_bahan2 = " telur"
+        let kebutuhanTelurPerBatch = 10
+        let hargaTelurPerButir = 2000
+
+        let nama_bahan3 = " Mentega"
+        let kebutuhanMentegaPerBatch = 300
+        let hargaMentegaPer100g = 4500
+
+        document.write("==================Biaya Produksi Manis Selalu================== ")
+        document.write("<br>")
+
+        document.write("target produksi : " + jumlahBatch + " batch")
+        document.write("<br>")
+        document.write("<br>")
+
+        document.write("total biaya bahan baku : ")
+        document.write("<br>")
+
+        document.write("tepung terigu " + kebutuhanTeriguPerBatch * jumlahBatch + " = " + "Rp " + (kebutuhanTeriguPerBatch * jumlahBatch * hargaTeriguPer1000g / 1000))
+        document.write("<br>")
+
+        document.write("telur " + kebutuhanTelurPerBatch * jumlahBatch + " = " + "Rp " + (kebutuhanTelurPerBatch * jumlahBatch * hargaTelurPerButir))
+        document.write("<br>")
+
+        document.write("mentega " + kebutuhanMentegaPerBatch * jumlahBatch + " = " + "Rp " + (kebutuhanMentegaPerBatch * jumlahBatch * hargaMentegaPer100g / 100))
+        document.write("<br>")
+
+        document.write("-------------------------------------------------------------------------------")
+        document.write("<br>")
+
+        document.write("total biaya produksi = " + (kebutuhanTeriguPerBatch * jumlahBatch * hargaTeriguPer1000g / 1000 + kebutuhanTelurPerBatch * jumlahBatch * hargaTelurPerButir + kebutuhanMentegaPerBatch * jumlahBatch * hargaMentegaPer100g / 100))
+        document.write("<br>")
+        document.write("=========================================================")
+    </script>
+</body>
+</head>
+
+</html>
