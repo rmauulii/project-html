@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        document.write(`===== Laporan Audit Stok Produk Toko Komputer =====`)
+       let nama_produk = "komputer"
+       document.write("<br><br>Produk : " + nama_produk)
+       let stokAwal = 50
+       document.write("<br>Stok awal : " + stokAwal)
+       let daftarTransaksi = [15, -20, 30, -10, -5]
+       let total_bersih = [0]
+       let stokAkhir = [0]
+       let totalBersih = daftarTransaksi[0] + daftarTransaksi[1] + daftarTransaksi[2] + daftarTransaksi[3] + daftarTransaksi[4]
+       document.write("<br><br>Detail transaksi (5 Hari) :<br>")
+
+       document.write("- Hari 1 (Masuk): + " + daftarTransaksi[0] + " pcs " + " | Stok jadi: " )
+       document.write(stokHari1 = stokAwal + daftarTransaksi[0])
+       document.write(" pcs " + "<br>")
+       
+
+       document.write("- Hari 2 (Keluar): " + daftarTransaksi[1] + " pcs " + " | Stok jadi: " )
+       document.write( stokHari2 = stokHari1 + daftarTransaksi[1] )
+       document.write(" pcs " + "<br>")
+
+       document.write("- Hari 3 (Masuk): + " + daftarTransaksi[2] + " pcs " + " | Stok jadi: " )
+       document.write( stokHari3 = stokHari2 + daftarTransaksi[2] )
+       document.write(" pcs " + "<br>")
+
+       document.write("- Hari 4 (Keluar): " + daftarTransaksi[3] + " pcs " + " | Stok jadi: " )
+       document.write( stokHari4 = stokHari3 + daftarTransaksi[3] )
+       document.write(" pcs " + "<br>")
+
+       document.write("- Hari 5 (Keluar): " + daftarTransaksi[4] + " pcs " + " | Stok jadi: " )
+       document.write( stokHari5 = stokHari4 + daftarTransaksi[4] )
+       document.write(" pcs " + "<br><br>")
+
+       document.write("- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -" + "<br>")
+       document.write("Total Bersih Transaksi: " + totalBersih + " pcs" + "<br>")
+       document.write("- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -" + "<br>")
+       
+       document.write("STOK AKHIR HARI KE-5: ** ")
+       document.write(stokAkhir = stokAwal + totalBersih + " pcs **" + "<br>")
+       document.write("===== Data Terarsip Selesai =====")
+      </script>
+</body>
+</html>
