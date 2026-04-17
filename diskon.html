@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kalkulator Diskon</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+<div class="container py-4">
+  <div class="card shadow-lg p-4 mx-auto" style="max-width: 500px;">
+    
+    <h3 class="text-center text-primary">🎠 Kalkulator Diskon</h3>
+
+    <!-- INPUT HARGA -->
+    <div class="mb-3">
+      <label for="harga" class="form-label">Harga</label>
+      <input type="number" class="form-control" id="harga" placeholder="Masukkan harga">
+    </div>
+
+    <!-- PILIH JENIS -->
+    <div class="mb-3">
+      <label for="jenis_pelanggan" class="form-label">Jenis Pelanggan</label>
+      <select class="form-select" id="jenis_pelanggan">
+        <option value="">Silahkan pilih</option>
+        <option value="umum">Umum (0%)</option>
+        <option value="pelajar">Pelajar (10%)</option>
+        <option value="member">Member (20%)</option>
+      </select>
+    </div>
+
+    <!-- BUTTON -->
+    <button type="button" class="btn btn-primary w-100" onclick="hitung_diskon()">
+      Hitung Diskon
+    </button>
+
+    <!-- HASIL -->
+    <div id="hasil" class="alert alert-info mt-3" style="display: none;"></div>
+
+  </div>
+</div>
+
+<script>
+function hitung_diskon() {
+  let harga = document.getElementById("harga").value;
+  let jenis = document.getElementById("jenis_pelanggan").value;
+  let hasil = document.getElementById("hasil");
+
+  harga = Number(harga);
+
+  if (!harga || !jenis) {
+    alert("Isi semua data dulu!");
+    return;
+  }
+
+  let diskon = 0;
+
+  if (jenis === "pelajar") {
+    diskon = 0.10;
+  } else if (jenis === "member") {
+    diskon = 0.20;
+  }
+
+  let potongan = harga * diskon;
+  let total = harga - potongan;
+
+  hasil.style.display = "block";
+  hasil.innerHTML = `
+    Harga Awal: Rp ${harga.toLocaleString()} <br>
+    Diskon: ${diskon * 100}% <br>
+    Potongan: Rp ${potongan.toLocaleString()} <br>
+    <strong>Total Bayar: Rp ${total.toLocaleString()}</strong>
+  `;
+}
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
